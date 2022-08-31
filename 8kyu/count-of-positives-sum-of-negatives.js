@@ -9,15 +9,13 @@
 
 
 function countPositivesSumNegatives(input) {
-    let arrpos = [];
-    let arrneg = [];
-    arrpos.push(input.filter(positive => positive > 0));
-    arrneg.push(input.filter(negative => negative < 0));
-
-    let arr = arrpos.reduce( (acc, c) => acc + c, 0);
-
-    console.log(arr)
-    console.log(arrneg)
+    if (input == null || input.length == 0) {
+        return []
+    } 
+    
+    let result = []
+    result[0] = input.filter(x => x > 0).length;
+    result[1] = input.filter(x => x < 0).reduce( (acc, c) => acc + c, 0);
+    
+    return result;
 }
-
-countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]);
