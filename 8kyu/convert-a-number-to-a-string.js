@@ -12,3 +12,7 @@ function numberToString(num) {
 }
 
 numberToString(67);
+
+//codewars super solution
+
+let numberToStringAlt = n => n.toString();
