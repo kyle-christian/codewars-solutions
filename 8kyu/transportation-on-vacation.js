@@ -4,6 +4,8 @@
 
 //3 or more, $20 off the total
 
+//my solution
+
 const rentalCarCost = d => {
     if (d >= 7) {
         return (d * 40) - 50;
@@ -15,3 +17,12 @@ const rentalCarCost = d => {
 };
 
 rentalCarCost(7);
+
+//elegant solution
+
+function rentalCarCostAlt(d) {
+    let total = d * 40;
+    if (d >= 7) return total - 50
+    if (d >= 3) return total - 20
+    return total
+};
