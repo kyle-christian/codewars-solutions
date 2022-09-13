@@ -26,6 +26,8 @@ separate string into array, go to each index[i][0] and capitalize, return result
 
 */
 
+//logic
+
 const toJadenCase = str => {
     let arr = str.split(' ');
     
@@ -37,3 +39,24 @@ const toJadenCase = str => {
 }
 
 console.log(toJadenCase(`How can mirrors be real if our eyes aren't real`))
+
+
+//.prototype solution
+
+// String.prototype.toJadenCase = function() {
+//     let newStr = "";
+
+//     this.split(" ").forEach(function(s) {
+//         newStr = newStr + " " + s.substring(0, 1).toUpperCase() + s.substring(1);
+//     })
+
+//     return newStr.substr(1);
+// }
+
+//another solution
+
+String.prototype.toJadenCase = function () {
+    return this.split(" ").map( function(word) {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    }).join(" ");
+}
