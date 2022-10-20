@@ -24,32 +24,43 @@ PSEUDOCODE:
 */
 
 function shortcut(string) {
-    strArr = string.split("")
-    vowels = []
+  strArr = string.split("");
+  vowels = [];
 
-    for (let i = 0; i < strArr.length; i++) {
-        switch(strArr[i]) {
-            case 'a':
-                strArr.splice(i, 1)
-                break;
-            case 'e':
-                strArr.splice(i, 1)
-                break;
-            case 'i':
-                strArr.splice(i, 1)
-                break;
-            case 'o':
-                strArr.splice(i, 1)
-                break;
-            case 'u':
-                strArr.splice(i, 1)
-                break;
-            default:
-                continue
-        }
+  for (let i = 0; i < strArr.length; i++) {
+    switch (strArr[i]) {
+      case "a":
+        strArr.splice(i, 1);
+        break;
+      case "e":
+        strArr.splice(i, 1);
+        break;
+      case "i":
+        strArr.splice(i, 1);
+        break;
+      case "o":
+        strArr.splice(i, 1);
+        break;
+      case "u":
+        strArr.splice(i, 1);
+        break;
+      default:
+        continue;
     }
+  }
 
-    return strArr.join('')
+  return strArr.join("");
 }
 
-console.log(shortcut('how are you today?'))
+console.log(shortcut("how are you today?"));
+
+// elegant solution
+
+function shortcutAlt(str) {
+  return str
+    .split("")
+    .filter(function (e) {
+      return ["a", "e", "i", "o", "u"].indexOf(e) == -1;
+    })
+    .join("");
+}
