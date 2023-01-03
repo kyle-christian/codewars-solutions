@@ -12,14 +12,14 @@ EXAMPLES:
 assert.strictEqual(removeExclamationMarks("Hello World!"), "Hello World")
 
 PSEUDOCODE:
-write a function that filters a string using .filter method
+write a function that replaces exclamation marks using the .replaceAll string method
 
 */
 
 function removeExclamationMarks(s) {
-    console.log(s.replace("!", ""))
-
-    return s.replace("!", "");
+    return s.replaceAll("!", "");
 }
 
 removeExclamationMarks("Hello World!!")
+
+let removeAlt = (s) => s.replaceAll("!", "");
