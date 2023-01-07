@@ -19,10 +19,4 @@ simple coniditional checking x
 
 */
 
-// let apple = x => x**2 > 1000 ? `It's hotter than the sun!!` : `Help yourself to a honeycomb Yorkie for the glovebox`;
-
-function apple(x) {
-    console.log(x**2 > 1000 ? `It's hotter than the sun!!` : `Help yourself to a honeycomb Yorkie for the glovebox`)
-}
-
-apple(100);
+let apple = x => x**2 > 1000 ? `It's hotter than the sun!!` : `Help yourself to a honeycomb Yorkie for the glovebox.`;
