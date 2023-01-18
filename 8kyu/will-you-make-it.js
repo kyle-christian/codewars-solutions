@@ -24,10 +24,10 @@ PSEUDOCODE:
 */
 
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
-    if (distanceToPump / mpg == fuelLeft) {
-        console.log(true);;
+    if (mpg * fuelLeft >= distanceToPump) {
+        return true;
     }  else {
-        console.log(false);
+        return false;
     }
 }
 
