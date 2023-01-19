@@ -2,11 +2,12 @@
 
 // Note: Empty arrays should return 0.
 
-const findAverage = arr => if (arr.length > 0) {
-    arr.reduce( (total, amount) => total + amount, 0 ) / arr.length;
+function findAverage(arr) {
+    if (arr.length > 0) {
+        return arr.reduce( (total, amount) => total + amount, 0 ) / arr.length;
+    } else {
+        return 0;
     }
-    else {
-        return 0
-    }
+}
 
 findAverage([1, 2, 3])
