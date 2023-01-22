@@ -40,3 +40,7 @@ const quarterOf = month => {
 }
 
 quarterOf(2)
+
+//alternative solution using math.ceil
+
+const quarterOfAlt = m => Math.ceil(m/3);
