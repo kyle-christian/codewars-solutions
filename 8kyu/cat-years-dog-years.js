@@ -41,3 +41,11 @@ var humanYearsCatYearsDogYears = function(humanYears) {
 }
 
 humanYearsCatYearsDogYears(10)
+
+// a much more simple and readable solution
+
+var humanYearsCatYearsDogYearsAlt = function(n) {
+    if (n == 1) return [1, 15, 15];
+    if (n == 2) return [2, 24, 24];
+    return [n, (n - 2) * 4 + 24, (n - 2) * 5 + 24]
+}
