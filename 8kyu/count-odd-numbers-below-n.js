@@ -24,7 +24,7 @@ use a for/while loop passing in n as the argument
 
 */
 
-function oddCount(n) {
+function oddCountFailed(n) {
     let count = 0;
 
     for (let i = 0; i < n; i++) {
@@ -35,3 +35,7 @@ function oddCount(n) {
 
     return count;
 }
+
+// tried this as my solution but the code took too long to execute, meaning there is a more efficient way of doing this without taking up all that computing resource!
+
+const oddCount = n => Math.floor(n/2);
