@@ -40,3 +40,7 @@ PROBLEMS
 4. true and false were backwards.
 
 */
+
+// better solution
+
+const checkAliveAlt = health => health > 0;
