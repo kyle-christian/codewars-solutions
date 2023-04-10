@@ -9,9 +9,9 @@
 
 // Rules:
 
-//     Children under 14 old.
-//     Teens under 18 old.
-//     Young under 21 old.
+//     Children under 14 age.
+//     Teens under 18 age.
+//     Young under 21 age.
 //     Adults have 21 or more.
 
 // Examples: (Input --> Output)
@@ -41,9 +41,17 @@ PSEUDOCODE:
 switch statement or a variation of the if/else
 */
 
-function peopleWithAgeDrink(old) {
-    if (old < 14) return 'drink toddy';
-    if (old < 17) return 'drink coke';
-    if (old < 21) return 'drink toddy';
-    if (old >= 21) return 'drink whisky';
+function peopleWithAgeDrink(age) {
+    if (age >= 21) return 'drink whisky';
+    if (age >= 18) return 'drink beer';
+    if (age >= 14) return 'drink coke';
+    if (age < 14) return 'drink toddy';
+}
+
+// beautiful solution
+
+const peopleWithAgeDrinkAlt = age => {
+    age < 14 ? 'drink toddy' :
+    age < 18 ? 'drink coke' :
+    age < 21 ? 'drink beer' : 'drink whisky';
 }
