@@ -27,7 +27,34 @@ RESULTS:
 if the wolf is directly next to you, do a certain thing, else warn the sheep # that they are about to be eaten by the wolf
 
 EXAMPLES:
+Input: ["sheep", "sheep", "sheep", "wolf", "sheep"]
+Output: "Oi! Sheep number 1! You are about to be eaten by a wolf!"
+
+Input: ["sheep", "sheep", "wolf"]
+Output: "Pls go away and stop eating my sheep"
 
 PSEUDOCODE:
 
 */
+
+function warnTheSheep(queue) {
+    let wolfIndex = queue.findIndex(e => e == 'wolf');
+    let sheepDanger = (queue.length - wolfIndex) - 1;
+
+    if (sheepDanger == 0) {
+        console.log('Pls go away and stop eating my sheep')
+        return 'Pls go away and stop eating my sheep'
+    } else {
+        console.log(`Oi! Sheep number ${sheepDanger}! You are about to be eaten by a wolf!`)
+        return `Oi! Sheep number ${sheepDanger}! You are about to be eaten by a wolf!`
+    }
+}
+
+warnTheSheep(["sheep", "sheep", "sheep", "wolf"])
+
+// clever solution reversing the array and then finding the index of the wolf using .indexOf
+
+function warnTheSheepAlt(queue) {
+    const position = queue.reverse().indexOf('wolf');
+    return position === 0 ? 'Pls go away and stop eating my sheep' : `Oi! Sheep number ${ position }! You are about to be eaten by a wolf!`;
+}
