@@ -16,8 +16,6 @@ function getSize(width, height, depth) {
     const surfaceArea = (2 * depth * width) + (2 * depth * height) + (2 * width * height);
     const volume = width * height * depth;
 
-    console.log([surfaceArea,volume]);
-
     return [surfaceArea, volume];
 }
 
